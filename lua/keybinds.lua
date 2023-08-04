@@ -28,19 +28,6 @@ key_mapper('n', '<leader>tf', ':lua require"telescope".extensions.file_browser.f
 key_mapper('n', '<leader>tg', ':lua require"telescope".extensions.file_browser.file_browser({ path = "%:p:h" })<CR>')
 
 
-key_mapper('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
-key_mapper('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
-key_mapper('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
-key_mapper('n', 'gw', ':lua vim.lsp.buf.document_symbol()<CR>')
-key_mapper('n', 'gW', ':lua vim.lsp.buf.workspace_symbol()<CR>')
-key_mapper('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
-key_mapper('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
-key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
-key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
-key_mapper('n', '<leader>af', ':lua vim.lsp.buf.code_action()<CR>')
-key_mapper('n', '<leader>fe', ':lua vim.diagnostic.open_float()<CR>')
-key_mapper('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
-
 key_mapper('n', '<leader>s', ':w<CR>')
 key_mapper('n', '<leader>c', ':noh<CR>')
 
@@ -69,6 +56,20 @@ key_mapper('n', 'J', "mzJ`z")
 key_mapper('n', 'n', "nzzzv")
 key_mapper('n', 'N', "Nzzzv")
 
+
+-- quickfix list
 key_mapper('n', 'QN', ':cn<CR>zz')
 key_mapper('n', 'QP', ':cp<CR>zz')
+key_mapper('n', 'QC', ':cclose<CR>')
+key_mapper('n', 'QQ', ':copen<CR>')
+
+
+-- Shift viewport 10 lines at a time with Ctrl-Y/E
+key_mapper('n', '<C-Y>', '10<C-y>')
+key_mapper('n', '<C-E>', '10<C-e>')
+
+
+-- Fzf tmux from nvim
+key_mapper('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
+key_mapper('n', '<C-g>', '<cmd>silent !tmux neww tmux-sessionizer $HOME<CR>')
 

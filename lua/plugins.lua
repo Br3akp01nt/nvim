@@ -18,10 +18,11 @@ packer.startup(function(use)
   use('wbthomason/packer.nvim')
   
   use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter-context'
   use 'sheerun/vim-polyglot'
 
   use 'neovim/nvim-lspconfig'
-  use 'OmniSharp/omnisharp-vim'
+  --use 'OmniSharp/omnisharp-vim'
 
   use 'nvim-lua/popup.nvim'
   use 'jremmen/vim-ripgrep'
@@ -46,6 +47,19 @@ packer.startup(function(use)
   }
 
   use 'ggandor/leap.nvim'
+
+  use {
+    'rmagatti/goto-preview',
+    config = function()
+      require('goto-preview').setup {}
+    end
+  }
+
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/cmp-vsnip'
+
 
   end
 )

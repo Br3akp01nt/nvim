@@ -22,10 +22,14 @@ vim.wo.signcolumn = 'yes'
 vim.wo.wrap = false
 vim.g.mapleader = ' '
 
+vim.g.OmniSharp_server_use_mono = 1
+
 require('keybinds')
 require('plugins')
 require('lsp')
 require('haskell')
 require('colors')
 require('leapkeys')
+require('trscontext')
+require('completion')
 
